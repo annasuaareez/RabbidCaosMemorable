@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondo"
+    tools:context=".MainActivity">
+
+    <!-- Contenedor para la línea y el botón de pausa -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal">
+
+        <View
+            android:layout_width="358dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/linea_redondeada" />
+
+        <!-- Botón de pausa dentro de la línea -->
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="33dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@android:drawable/ic_media_pause" />
+
+        <!-- Contenedor horizontal para los puntajes -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Contenedor izquierdo para el puntaje del jugador 1 -->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <!-- ImageView para la imagen del jugador 1 -->
+                <ImageView
+                    android:id="@+id/imagePlayer1"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="1dp"
+                    app:srcCompat="@drawable/player1_playing" />
+                <!-- FrameLayout para el puntaje del jugador 1 -->
+
+                <FrameLayout
+                    android:id="@+id/player1ScoreContainer"
+                    android:layout_width="65dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:background="@color/colorFondo">
+
+                    <TextView
+                        android:id="@+id/player1Score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:fontFamily="@font/jack"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                </FrameLayout>
+            </RelativeLayout>
+
+            <!-- Contenedor izquierdo para el puntaje del jugador 2 -->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imagePlayer2"
+                    android:layout_width="41dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:elevation="1dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/player2" />
+
+                <FrameLayout
+                    android:id="@+id/player2ScoreContainer"
+                    android:layout_width="65dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:background="@color/colorFondo">
+
+                    <TextView
+                        android:id="@+id/player2Score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:fontFamily="@font/jack"
+                        android:textSize="16sp"
+                        android:textColor="#000000" />
+
+                </FrameLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Tablero 4x4 de botones ImageButton con imágenes -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_vertical"
+        android:columnCount="4">
+
+        <!-- Fila 1 -->
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <!-- Fila 2 -->
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <!-- Fila 3 -->
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <!-- Fila 4 -->
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            app:srcCompat="@drawable/back_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"
+            android:layout_margin="3dp"/>
+
+    </GridLayout>
+
+</FrameLayout>

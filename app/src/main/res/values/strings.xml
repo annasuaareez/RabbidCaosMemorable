@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Rabbids: Caos Memorable</string>
+    <string name="tituloJuego1">Rabbids: </string>
+    <string name="tituloJuego2">Caos Memorable</string>
+    <string name="confi">CONFIGURACIóN</string>
+    <string name="mus">Música</string>
+    <string name="son">Sonido</string>
+    <string name="play">PLAY</string>
+    <string name="paus">PAUSA</string>
+    <string name="playAgain">¿Desea volver a jugar?</string>
+    <string name="s">SI</string>
+    <string name="n">NO</string>
+</resources>

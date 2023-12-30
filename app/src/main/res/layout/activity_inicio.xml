@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondo"
+    tools:context=".Inicio">
+
+    <ImageView
+        android:id="@+id/rabbidInicio"
+        android:layout_width="282dp"
+        android:layout_height="521dp"
+        android:layout_gravity="right"
+        android:src="@drawable/rabbid_inicio" />
+
+    <TextView
+        android:id="@+id/titulo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tituloJuego1"
+        android:textSize="70dp"
+        android:textColor="@color/naranja"
+        android:fontFamily="@font/jack"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:rotation="-15"/>
+
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tituloJuego2"
+        android:textSize="50dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/jack"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="160dp"
+        android:rotation="8"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/jack"
+        android:text="@string/play"
+        android:textColor="@color/naranja"
+        android:textSize="153dp" />
+
+    <ImageButton
+        android:id="@+id/btnConfiguracion"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|right"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/configuracion"
+        android:scaleType="fitCenter" />
+
+</FrameLayout>

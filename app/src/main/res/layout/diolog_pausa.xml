@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jack"
+            android:text="@string/paus"
+            android:textColor="@android:color/black"
+            android:layout_gravity="start"
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="start">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jack"
+            android:text="@string/mus"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/btnMusic"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/music_on"
+            app:tint="@color/naranja" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jack"
+            android:text="@string/son"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+
+        <ImageView
+            android:id="@+id/btnSound"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/sound_on"
+            app:tint="@color/naranja" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="start">
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/naranja"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:id="@+id/btnReplay"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/naranja"
+            app:srcCompat="@drawable/baseline_replay_24" />
+
+    </LinearLayout>
+
+</LinearLayout>
